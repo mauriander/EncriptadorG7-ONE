@@ -1,0 +1,36 @@
+.btn-encriptar{
+    background-color: white;
+    border: 1px solid lightsteelblue;
+    border-radius: 16px;
+    color: lightsteelblue;
+    cursor: pointer;
+    height: 64px;
+    margin-left: 30px;
+    width: 320px;
+
+}
+.btn-desencriptar {
+    background-color: white;
+    border: 1px solid lightsteelblue;
+    border-radius: 16px;
+    color: lightsteelblue;
+    cursor: pointer;
+    height: 64px;
+    margin-left: 30px;
+    width: 320px;
+
+}
+
+.mensaje{
+    background: wheat;
+    border: none;
+    border-radius: 16px;
+    color: lightsteelblue;
+    margin-left: 88px;
+    margin-top: 22px;
+    padding-left: 20px;
+    position: fixed;
+}
+.mensaje:focus{
+    outline: none;
+}
