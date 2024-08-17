@@ -1,19 +1,89 @@
-.btn-encriptar{
-    background-color: white;
-    border: 1px solid lightsteelblue;
+*{
+    background: white;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logo{
+padding-top: 10px;
+margin-left: 10px;
+width: 12%;
+
+
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+
+}
+
+.text-area{
+    border: none;
+    color:navy;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+::placeholder{color: navy;}
+.text-area:focus{
+    outline: none;
+}
+.mensaje{
+    background: white;
+    background-image: url("./img/Muñeco.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 32px;
+    color: navy;
+    margin-left:88px;
+    margin-top: 22px;
+    padding-left: 20px;
+    position: fixed;
+
+}
+.mensaje:focus{
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 16px;
+
+}
+
+.btn-copiar{
+
+    border: 1px solid navy;
     border-radius: 16px;
-    color: lightsteelblue;
+    color:navy;
     cursor: pointer;
     height: 64px;
+    margin-left: 102px;
+    margin-top: 406px;
+    position: absolute;
+    width: 320px;
+}
+
+.btn-encriptar{
+    background-color: navy;
+    border: 1px solid lightsteelblue;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    height: 64px; 
     margin-left: 30px;
     width: 320px;
 
 }
 .btn-desencriptar {
-    background-color: white;
-    border: 1px solid lightsteelblue;
+    background-color: lightsteelblue;
+
+    border: 1px solid navy;
     border-radius: 16px;
-    color: lightsteelblue;
+    color: navy;
     cursor: pointer;
     height: 64px;
     margin-left: 30px;
@@ -21,16 +91,3 @@
 
 }
 
-.mensaje{
-    background: wheat;
-    border: none;
-    border-radius: 16px;
-    color: lightsteelblue;
-    margin-left: 88px;
-    margin-top: 22px;
-    padding-left: 20px;
-    position: fixed;
-}
-.mensaje:focus{
-    outline: none;
-}
