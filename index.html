@@ -19,8 +19,8 @@
     <header>
       <img class="logo" src="./img/Logo.png" alt="Logo Alura" />
     </header>
-    <main>
-      <section>
+    <main class="contenedor">
+      <section class="izquierda">
         <textarea
           class="text-area"
           cols="30"
@@ -28,7 +28,7 @@
           placeholder="Ingrese el texto aqui"
         ></textarea>
         <div>
-          <h6 class="informacion">Solo letras minusculas y sin acentos</h6>
+          <p class="informacion">Solo letras minúsculas y sin acentos</p>
         </div>
         <div class="botones">
           <button class="btn-encriptar" onclick="btnEncriptar()">
@@ -39,15 +39,31 @@
           </button>
         </div>
       </section>
-      <section>
+      <section class="derecha">
         <textarea class="mensaje" cols="20" rows="10"></textarea>
-        <div>
+
+        <div class="copiar">
+          <div class="mensaje2">
+            <p class="titulo2">Ningún mensaje fue encontrado</p>
+            <p class="mensajeinterno2">
+              Ingrese el texto que desea encriptar o desencriptar
+            </p>
+          </div>
+
           <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <p class="copyright">&copy Developed by Mauricio Andermatten</p>
+      <div class="redes">
+        <a
+          href="https://www.linkedin.com/in/mauricio-andermatten/"
+          target="_blank"
+          >Linkedin</a
+        >
+        <a href="https://github.com/mauriander" target="_blank">Git</a>
+      </div>
     </footer>
 
     <script src="script.js" async defer></script>

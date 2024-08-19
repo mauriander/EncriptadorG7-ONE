@@ -1,11 +1,36 @@
 const textArea=document.querySelector(".text-area");
 const mensaje=document.querySelector(".mensaje");
+const botonCopiar=document.querySelector(".btn-copiar");
 
 //a por ai
 //e ppor enter
 //i ppor imes
 //o ppor ober
 // u ppor ufat
+//reiniciar los campos y dejarlkos en 0
+function limpiar() {
+     document.querySelectorAll('textarea').forEach(textarea => {        textarea.value = '';      });
+    //  document.querySelector('.mensaje2').innerHTML = '';
+         if (mensaje.value.trim() !== '') {
+        botonCopiar.style.display = 'block'; // Mostrar el botón
+      } else {
+        botonCopiar.style.display = 'none'; // Ocultar el botón
+      }
+         // Solo oculta el mensaje en dispositivos móviles o tabletas cuando esté vacío
+      if (window.innerWidth <= 768) {
+        if (mensaje.value.trim() === '') {
+          mensaje.classList.add('hidden'); // Ocultar el mensaje
+        } else {
+          mensaje.classList.remove('hidden'); // Mostrar el mensaje
+        }
+      }
+
+    }
+window.onload = function() {   limpiar();};
+
+
+ // Verifica si hay texto en el área de mensaje
+  
 
 
 function btnEncriptar(){
@@ -13,6 +38,13 @@ const textoEncriptado=encriptar(textArea.value);
 mensaje.value=textoEncriptado;
 textArea.value="";
 mensaje.style.backgroundImage="none";
+  
+  document.querySelector('.mensaje2').style.display = 'none';
+        if (mensaje.value.trim() !== '') {
+        botonCopiar.style.display = 'block'; // Mostrar el botón
+      } else {
+        botonCopiar.style.display = 'none'; // Ocultar el botón
+      }
 }
 
 function encriptar(stringEncriptado){
@@ -26,6 +58,7 @@ stringEncriptado=stringEncriptado.replaceAll(reemplazo[i][0],reemplazo[i][1]);
 }
 }
 return stringEncriptado;
+
 }
 
 function btnDesencriptar(){
@@ -34,6 +67,12 @@ mensaje.value=textoEncriptado;
 textArea.value="";
 mensaje.style.backgroundImage="none";
 
+document.querySelector('.mensaje2').style.display = 'none';
+      if (mensaje.value.trim() !== '') {
+        botonCopiar.style.display = 'block'; // Mostrar el botón
+      } else {
+        botonCopiar.style.display = 'none'; // Ocultar el botón
+      }
 }
 
 
@@ -48,6 +87,7 @@ stringDesencriptado=stringDesencriptado.replaceAll(reemplazo[i][1],reemplazo[i][
 }
 }
 return stringDesencriptado;
+
 }
 
 function btnCopiar(){
@@ -59,4 +99,5 @@ function btnCopiar(){
         alert("Nada que copiar");
     }
 }
+
 
