@@ -32,13 +32,27 @@ window.onload = function() {   limpiar();};
  // Verifica si hay texto en el área de mensaje
   
 
+ function validar(texto) {
+  // Expresión regular para permitir solo letras minúsculas y espacios
+  const regex = /^[a-z\s]*$/;
+  return regex.test(texto);
+}
 
 function btnEncriptar(){
+
+const texto = textArea.value; // Convertir el texto a minúsculas
+
+// Llama a la función validar
+if (!validar(texto)) {
+  alert('El texto solo puede contener letras minúsculas y no debe poseer caracteres especiales');
+  return; // Detiene la ejecución si la validación falla
+}
+
 const textoEncriptado=encriptar(textArea.value);
 mensaje.value=textoEncriptado;
 textArea.value="";
 mensaje.style.backgroundImage="none";
-  
+
   document.querySelector('.mensaje2').style.display = 'none';
         if (mensaje.value.trim() !== '') {
         botonCopiar.style.display = 'block'; // Mostrar el botón
@@ -47,11 +61,13 @@ mensaje.style.backgroundImage="none";
       }
 }
 
+
 function encriptar(stringEncriptado){
 let reemplazo = [
    ["e", "enter"],    ["i", "imes"],    ["a", "ai"],       ["o", "ober"],    ["u", "ufat"],
 ];
-stringEncriptado=stringEncriptado.toLowerCase();
+//stringEncriptado=stringEncriptado.toLowerCase();
+
 for (let i=0;i<reemplazo.length;i++){
 if(stringEncriptado.includes(reemplazo[i][0])){
 stringEncriptado=stringEncriptado.replaceAll(reemplazo[i][0],reemplazo[i][1]);
@@ -62,6 +78,11 @@ return stringEncriptado;
 }
 
 function btnDesencriptar(){
+
+  if (!validar(texto)) {
+    alert('El texto solo puede contener letras minúsculas y no debe poseer caracteres especiales');
+    return; // Detiene la ejecución si la validación falla
+  }
 const textoEncriptado=desencriptar(textArea.value);
 mensaje.value=textoEncriptado;
 textArea.value="";
