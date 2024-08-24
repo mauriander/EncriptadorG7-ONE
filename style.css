@@ -39,7 +39,7 @@ main {
     border: none;
     color: navy;
     margin-top: 20px;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
     width: 100%;
     max-width: 500px;
     /* max-height: 400px; */
