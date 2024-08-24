@@ -9,7 +9,7 @@
 .logo{
 padding-top: 10px;
 margin-left: 10px;
-width: 12%;
+width: 8%;
 
 
 }
@@ -31,6 +31,7 @@ main {
     width: 50%;
     position: relative;
     padding: 18px;
+    
 
 }
 
@@ -40,8 +41,8 @@ main {
     margin-top: 20px;
     text-transform: lowercase;
     width: 100%;
-    max-width: 600px;
-    
+    max-width: 500px;
+    /* max-height: 400px; */
 }
 
 ::placeholder {
@@ -63,8 +64,8 @@ main {
     margin-top: 20px;
     padding-left: 20px;
     width: 100%;
-
-    max-width: 600px;
+    max-width: 400px;
+    /* max-height: 400px; */
 }
 
 .mensaje:focus {
@@ -82,7 +83,7 @@ display: flex;
 flex-direction: column;
 text-align: center;
 align-items: center;
-width: 100%;
+width: 90%;
 
 }
 .titulo2{

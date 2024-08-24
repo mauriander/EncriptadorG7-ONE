@@ -78,7 +78,7 @@ return stringEncriptado;
 }
 
 function btnDesencriptar(){
-
+  const texto = textArea.value;
   if (!validar(texto)) {
     alert('El texto solo puede contener letras minúsculas y no debe poseer caracteres especiales');
     return; // Detiene la ejecución si la validación falla
