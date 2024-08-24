@@ -1,7 +1,7 @@
 # EncriptadorG7-ONE
 
 _Este es un proyecto de aplicación web que permite a los usuarios encriptar y desencriptar texto utilizando reglas de sustitución específicas. Para este desafío, aplicamos conocimientos de lógica de programación en un contexto práctico._
-
+* [DEPLOY](https://mauriander.github.io/EncriptadorG7-ONE/)
 ![alt text](img/readme/Video.gif)
 
 
@@ -38,8 +38,6 @@ Funcionalidades
 
 ## Comenzando 🚀
 
-Mira **Despliegue** para conocer cómo desplegar el proyecto.
-
 ### Pre-requisitos 📋
 ```
 - Conexión a internet
@@ -70,7 +68,7 @@ Prueba la encriptación y desencriptación ingresando texto en el campo de entra
 ## Despliegue 📦
 
 ```
-Puedes alojar el proyecto en GitHub Pages o en un servidor web local.
+* [CHALLENGE](https://mauriander.github.io/EncriptadorG7-ONE/)
 ```
 
 ## Construido con 🛠️
